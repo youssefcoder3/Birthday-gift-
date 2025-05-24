@@ -17,7 +17,7 @@
       border-radius: 20px;
       padding: 30px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      max-width: 500px;
+      max-width: 600px;
       margin: 0 auto;
     }
     button {
@@ -36,6 +36,18 @@
       font-weight: bold;
       font-size: 20px;
     }
+    #final-message {
+      display: none;
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #b30059;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -48,11 +60,21 @@
       <p>Happy Birthday to the most special person in my world. Even from a distance, my love reaches you. Stay smiling, stay magical.</p>
       <p>— Your Secret Admirer</p>
     </div>
+    <div id="final-message">
+      No matter the miles between us, you’re always close to my heart.  
+      <br />
+      Today is your day to shine — and I'm so lucky to celebrate it with you, even like this.  
+      <br /><br />
+      <strong>Happy Birthday, my love. Forever yours.</strong>
+    </div>
   </div>
 
   <script>
     function showMessage() {
       document.getElementById("message").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("final-message").style.display = "block";
+      }, 2000);
     }
   </script>
 </body>
